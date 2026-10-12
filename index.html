@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Ñande.py — Pizarras personalizadas pintadas a mano para cumpleaños, grados, bodas, fiestas y eventos en Paraguay.">
+  <meta name="theme-color" content="#121212">
+  <title>Ñande.py | Pizarras artesanales</title>
+
+  <!-- Tipografías: Caveat (tiza), Great Vibes (cursiva), Monoton/Bebas (neón), Poppins (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Great+Vibes&family=Bebas+Neue&family=Monoton&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="logo.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER / NAVEGACIÓN ================= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="Ñande.py — ir al inicio">
+        <!-- Si logo.jpg no carga, se oculta y queda el texto "Ñande.py" como respaldo -->
+        <img src="logo.jpg" alt="" class="brand__logo" onerror="this.remove()">
+        <span class="brand__name">Ñande<span>.py</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#inicio" class="nav__link is-active">Inicio</a>
+        <a href="#nosotros" class="nav__link">Nosotros</a>
+        <a href="#galeria" class="nav__link">Galería</a>
+        <a href="#pizarra" class="nav__link nav__link--cta">Realiza tu Pizarra</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO / INICIO ================= -->
+    <section class="hero" id="inicio">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow">El arte de lo nuestro</p>
+          <h1 class="hero__title">Arte y Calidez para tus Eventos</h1>
+          <p class="hero__subtitle">
+            Pizarras personalizadas, pintadas a mano letra por letra, para que tu
+            cumpleaños, graduación, boda o fiesta tenga una bienvenida única.
+          </p>
+          <div class="hero__actions">
+            <a href="#pizarra" class="btn btn--gold">Diseña tu Pizarra</a>
+            <a href="#nosotros" class="btn btn--ghost">Conocenos</a>
+          </div>
+        </div>
+
+        <!-- Pizarra decorativa del hero -->
+        <div class="hero__art" aria-hidden="true">
+          <div class="mini-board">
+            <div class="mini-board__surface chalk-texture">
+              <span class="mini-board__small">bienvenidos</span>
+              <span class="mini-board__big">Ñande</span>
+              <span class="mini-board__line"></span>
+              <span class="mini-board__small">hecho a mano</span>
+            </div>
+          </div>
+          <div class="mini-board__legs"><span></span><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NOSOTROS ================= -->
+    <section class="section about" id="nosotros">
+      <div class="container about__inner">
+        <div class="about__media">
+          <img src="logo.jpg" alt="Ñande — El arte de lo nuestro" loading="lazy">
+        </div>
+        <div class="about__text">
+          <p class="eyebrow">Nosotros</p>
+          <h2 class="section__title">Hecho a mano, con cariño</h2>
+          <p>
+            En <strong>Ñande.py</strong> creemos que cada celebración merece un detalle que
+            se recuerde. Por eso diseñamos y pintamos <strong>pizarras personalizadas
+            totalmente a mano</strong>, con la calidez de la tiza y la nobleza de la madera.
+          </p>
+          <p>
+            Acompañamos cumpleaños, entregas de título, bodas, fiestas, eventos de club y
+            todos esos momentos especiales que querés compartir con tu gente.
+            <em>Ñande</em> significa “nuestro”: y eso es lo que hacemos, arte de lo nuestro.
+          </p>
+
+          <ul class="features">
+            <li><span class="features__icon">✍️</span><div><strong>100% a mano</strong><small>Lettering artesanal, sin impresiones.</small></div></li>
+            <li><span class="features__icon">🪵</span><div><strong>Varias estructuras</strong><small>Caballete, marco negro, colgante y gigante.</small></div></li>
+            <li><span class="features__icon">🎉</span><div><strong>Para todo evento</strong><small>Diseño a medida de tu temática.</small></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERÍA ================= -->
+    <section class="section gallery" id="galeria">
+      <div class="gallery__spot" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Galería</p>
+          <h2 class="section__title">Nuestras pizarras</h2>
+          <p class="section__lead">Cada una es única: pensada, dibujada y pintada a mano para un momento que no se repite.</p>
+        </header>
+
+        <!-- Cada foto aparece desde el costado al hacer scroll (script.js). Clic = ver en grande. -->
+        <div class="gallery__grid" id="galleryGrid">
+          <figure class="gallery__item">
+            <button type="button" class="gallery__btn" aria-label="Ver en grande: Diseño, arte y publicidad">
+              <img src="img/galeria/dap-diseno-arte.jpg" alt="Tres pizarras con lettering dorado y dibujos de tiza para el evento DAP: diseño, arte y publicidad" loading="lazy" width="723" height="765">
+            </button>
+            <figcaption><span class="gallery__tag">Evento institucional</span><strong>Diseño, arte y publicidad</strong></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <button type="button" class="gallery__btn" aria-label="Ver en grande: Welcome to Gabriella's 17th">
+              <img src="img/galeria/mascaras-gabriella-17.jpg" alt="Pizarra con máscara veneciana y texto Welcome to Gabriella's 17th Birthday, con luces y globos dorados" loading="lazy" width="752" height="936">
+            </button>
+            <figcaption><span class="gallery__tag">Cumpleaños de máscaras</span><strong>Gabriella's 17th</strong></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <button type="button" class="gallery__btn" aria-label="Ver en grande: Máscara veneciana, detalle">
+              <img src="img/galeria/mascaras-gabriella-detalle.jpg" alt="Detalle de la máscara veneciana pintada a mano en tiza plateada, dorada y lila" loading="lazy" width="747" height="935">
+            </button>
+            <figcaption><span class="gallery__tag">Detalle a mano</span><strong>Máscara veneciana</strong></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <button type="button" class="gallery__btn" aria-label="Ver en grande: España te espera">
+              <img src="img/galeria/buen-viaje-espana.jpg" alt="Pizarra de caballete de madera: España te espera, Buen Viaje Montse, con flores y abanico" loading="lazy" width="747" height="936">
+            </button>
+            <figcaption><span class="gallery__tag">Buen viaje</span><strong>España te espera</strong></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <button type="button" class="gallery__btn" aria-label="Ver en grande: Happy Birthday Ali">
+              <img src="img/galeria/happy-birthday-ali.jpg" alt="Pizarra marco negro Happy Birthday Ali con flores lilas y hojas verdes" loading="lazy" width="746" height="927">
+            </button>
+            <figcaption><span class="gallery__tag">Cumpleaños</span><strong>Happy Birthday Ali</strong></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <button type="button" class="gallery__btn" aria-label="Ver en grande: London is calling">
+              <img src="img/galeria/buen-viaje-london.jpg" alt="Pizarra Fati, London is calling, Buen Viaje, con London Eye y Big Ben dibujados en tiza" loading="lazy" width="746" height="923">
+            </button>
+            <figcaption><span class="gallery__tag">Buen viaje</span><strong>London is calling</strong></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <button type="button" class="gallery__btn" aria-label="Ver en grande: Mis últimos 20's">
+              <img src="img/galeria/mis-ultimos-20s.jpg" alt="Pizarra con corona dorada: Mis últimos 20's Rocío, con moños rojos y globos dorados" loading="lazy" width="747" height="933">
+            </button>
+            <figcaption><span class="gallery__tag">Cumpleaños</span><strong>Mis últimos 20's</strong></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <button type="button" class="gallery__btn" aria-label="Ver en grande: Vamos Paraguay">
+              <img src="img/galeria/vamos-paraguay.jpg" alt="Pizarra Vamos Paraguay con pelota, bandera y globos rojo, blanco y azul" loading="lazy" width="747" height="931">
+            </button>
+            <figcaption><span class="gallery__tag">Evento deportivo</span><strong>Vamos Paraguay</strong></figcaption>
+          </figure>
+        </div>
+
+        <div class="gallery__cta">
+          <p>¿Te imaginás la tuya?</p>
+          <a href="#pizarra" class="btn btn--whatsapp">Diseñá tu pizarra</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visor de fotos en grande -->
+    <dialog class="lightbox" id="lightbox" aria-label="Foto en grande">
+      <button type="button" class="lightbox__close" data-lb="close" aria-label="Cerrar">✕</button>
+      <button type="button" class="lightbox__nav lightbox__nav--prev" data-lb="prev" aria-label="Foto anterior">‹</button>
+      <figure class="lightbox__figure">
+        <img id="lightboxImg" src="" alt="">
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+      <button type="button" class="lightbox__nav lightbox__nav--next" data-lb="next" aria-label="Foto siguiente">›</button>
+      <p class="lightbox__count" id="lightboxCount"></p>
+    </dialog>
+
+    <!-- ================= CONFIGURADOR: REALIZA TU PIZARRA ================= -->
+    <section class="section builder" id="pizarra">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Realiza tu Pizarra</p>
+          <h2 class="section__title">Diseñá la tuya en vivo</h2>
+          <p class="section__lead">Elegí la medida, la temática y la letra. Mirá cómo queda y envianos el pedido por WhatsApp.</p>
+        </header>
+
+        <div class="builder__grid">
+          <!-- ---------- A. Formulario ---------- -->
+          <form class="panel form" id="boardForm" novalidate>
+            <div class="field">
+              <label for="size">1. Medida y estructura</label>
+              <select id="size" name="size">
+                <optgroup label="Caballete de Madera Natural">
+                  <option value="madera-115" data-frame="wood"  data-stand="easel" data-h="115" data-w="60">1.15 m x 60 cm</option>
+                  <option value="madera-150" data-frame="wood"  data-stand="easel" data-h="150" data-w="70" selected>1.50 m x 70 cm</option>
+                  <option value="madera-175" data-frame="wood"  data-stand="easel" data-h="175" data-w="80">1.75 m x 80 cm</option>
+                </optgroup>
+                <optgroup label="Caballete Marco Negro">
+                  <option value="negro-130"  data-frame="black" data-stand="easel" data-h="130" data-w="65">1.30 m x 65 cm</option>
+                  <option value="negro-140"  data-frame="black" data-stand="easel" data-h="140" data-w="65">1.40 m x 65 cm</option>
+                  <option value="negro-150"  data-frame="black" data-stand="easel" data-h="150" data-w="70">1.50 m x 70 cm</option>
+                </optgroup>
+                <optgroup label="Estructura Colgante (pizarra suspendida)">
+                  <option value="colgante-135" data-frame="wood" data-stand="hanging" data-h="135" data-w="75">1.35 m x 75 cm</option>
+                  <option value="colgante-150" data-frame="wood" data-stand="hanging" data-h="150" data-w="80">1.50 m x 80 cm</option>
+                </optgroup>
+                <optgroup label="Gigante">
+                  <option value="gigante-170" data-frame="wood" data-stand="giant" data-h="170" data-w="220">1.70 m x 2.20 m (Tuichaiterei)</option>
+                </optgroup>
+              </select>
+              <small class="field__hint" id="sizeHint">Caballete de Madera Natural</small>
+            </div>
+
+            <fieldset class="field">
+              <legend>2. Temática / ocasión</legend>
+              <div class="chips" id="themeChips">
+                <label class="chip"><input type="radio" name="theme" value="cumple" checked><span>🎂 Cumpleaños / Anniversary</span></label>
+                <label class="chip"><input type="radio" name="theme" value="grado"><span>🎓 Entrega de Título / Grado</span></label>
+                <label class="chip"><input type="radio" name="theme" value="disco"><span>🪩 Disco / Fiesta / Bienvenida</span></label>
+                <label class="chip"><input type="radio" name="theme" value="club"><span>🏆 Club / Evento Deportivo</span></label>
+                <label class="chip"><input type="radio" name="theme" value="boda"><span>💍 Boda / Evento Especial</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field">
+              <legend>3. Tipografía</legend>
+              <div class="segmented" id="fontChips">
+                <label class="seg seg--chalk"><input type="radio" name="font" value="chalk" checked><span>Artesanal / Tiza</span></label>
+                <label class="seg seg--script"><input type="radio" name="font" value="script"><span>Cursiva Elegante</span></label>
+                <label class="seg seg--neon"><input type="radio" name="font" value="neon"><span>Moderna / Neón</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="mainText">4. Nombre / texto principal</label>
+              <input type="text" id="mainText" name="mainText" maxlength="40" placeholder="Ej: Fati, Andrea & Gabriela, Mica's 25th" autocomplete="off">
+              <small class="field__hint"><span id="mainCount">0</span>/40</small>
+              <small class="field__hint is-error" id="mainError" hidden>Escribí el nombre o texto principal para enviar el pedido.</small>
+            </div>
+
+            <div class="field">
+              <label for="subText">5. Fecha / frase corta</label>
+              <input type="text" id="subText" name="subText" maxlength="30" placeholder="Ej: Mis 20s, Buen Viaje, 15.10.2026" autocomplete="off">
+              <small class="field__hint"><span id="subCount">0</span>/30</small>
+            </div>
+
+            <button type="submit" class="btn btn--whatsapp btn--block">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.9.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.47-9.47 9.47zm8.06-17.54A11.32 11.32 0 0 0 12.04.62C5.76.62.65 5.73.65 12.01c0 2 .52 3.96 1.52 5.69L.55 23.6l6.04-1.58a11.37 11.37 0 0 0 5.44 1.39h.01c6.28 0 11.39-5.11 11.39-11.39 0-3.04-1.18-5.9-3.33-8.05z"/></svg>
+              Enviar pedido por WhatsApp
+            </button>
+            <p class="form__note">Se abrirá WhatsApp con tu pedido ya escrito. Solo tenés que enviarlo.</p>
+          </form>
+
+          <!-- ---------- B. Vista previa en tiempo real ---------- -->
+          <div class="panel preview" aria-live="polite">
+            <div class="preview__head">
+              <span class="preview__badge">Vista previa</span>
+              <span class="preview__meta" id="previewMeta">1.50 m x 70 cm</span>
+            </div>
+
+            <div class="stage" id="stage">
+              <!-- data-frame: wood | black   data-stand: easel | hanging | giant -->
+              <div class="board" id="board" data-frame="wood" data-stand="easel" data-theme="cumple" data-font="chalk">
+                <div class="board__rope" aria-hidden="true"></div>
+                <div class="board__frame" id="boardFrame">
+                  <div class="board__surface chalk-texture" id="boardSurface">
+                    <div class="board__deco board__deco--top" id="decoTop" aria-hidden="true">🎈 ✨ 🎈</div>
+                    <p class="board__theme" id="previewTheme">¡Feliz Cumple!</p>
+                    <p class="board__name" id="previewName">Tu Nombre</p>
+                    <span class="board__divider" aria-hidden="true"></span>
+                    <p class="board__sub" id="previewSub">Tu fecha o frase</p>
+                    <div class="board__deco board__deco--bottom" id="decoBottom" aria-hidden="true">🎂</div>
+                  </div>
+                </div>
+                <div class="board__legs" aria-hidden="true"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+
+            <p class="preview__note">* Simulación ilustrativa. El diseño final se pinta a mano y puede variar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__name">Ñande<span>.py</span></span>
+        <small>El arte de lo nuestro</small>
+      </div>
+      <a class="footer__ig" href="https://www.instagram.com/nande_py_/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+        @nande_py_
+      </a>
+      <p class="footer__copy">© <span id="year">2026</span> Ñande.py — Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
